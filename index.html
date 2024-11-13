@@ -18,7 +18,7 @@
         !function(f,b,e,v,n,t,s) {
             if(f.fbq) return; 
             n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
             if(!f._fbq) f._fbq=n; 
             n.push=n; 
             n.loaded=!0; 
@@ -188,8 +188,14 @@
 
     <!-- Script de seguimiento para el botón -->
     <script>
-        document.getElementById("registro-boton").addEventListener("click", function() {
-            fbq('track', 'Lead'); // Este evento será detectado por Meta Pixel
+        document.getElementById("registro-boton").addEventListener("click", function(e) {
+            // Evita que se ejecute la redirección antes de enviar el evento al Pixel
+            fbq('track', 'Lead'); 
+            
+            // Redirige después de un pequeño retraso para asegurar el seguimiento
+            setTimeout(function() {
+                window.location.href = e.target.href;
+            }, 200); // Espera 200ms antes de redirigir
         });
     </script>
 </body>
