@@ -18,7 +18,7 @@
         !function(f,b,e,v,n,t,s) {
             if(f.fbq) return; 
             n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
             if(!f._fbq) f._fbq=n; 
             n.push=n; 
             n.loaded=!0; 
@@ -45,41 +45,92 @@
             background-size: cover;
         }
 
+        @keyframes olympus {
+            from {
+                transform: scale(.9)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
         p {
             font-family: "Poppins", sans-serif;
             font-size: 25px;
+        }
+
+        .link-a-ws {
+            padding: 1.3rem;
+            color: white;
+            border: 3px solid;
+            width: 100% !important;
+            display: flex;
+            border-radius: 5px;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px !important;
+            transition: .3s all ease-in;
+        }
+
+        .link-a-ws:hover {
+            border: 3px solid rgba(228, 227, 227, 0.541);
+            color: white;
+            transform: translateX(4px);
         }
 
         .buton {
             color: #FFFFFF;
             background: linear-gradient(45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
             text-decoration: none;
-            padding: 1.5rem !important;
-            letter-spacing: 2px;
+            padding: 2rem !important;
+            letter-spacing: 3px;
             border-radius: 30px;
             font-size: 22px;
             font-weight: bold;
             font-family: 'Poppins';
             text-transform: uppercase !important;
-            display: inline-block;
             transition: .3s all ease-in-out;
+        }
+
+        .transform {
+            transition: all .3s ease-in-out !important
+        }
+
+        .transform:hover {
+            transform: scale(1.1) !important;
+        }
+
+        .my-6 {
+            margin-bottom: 6rem;
+            margin-top: 6rem;
+        }
+
+        img {
+            width: 100%;
         }
 
         .buton:hover {
             transform: scale(1.1);
-            transition: .3s all ease-in-out;
         }
 
-        .text-white {
-            color: #fff;
-        }
+        @media screen and (max-width: 767px) {
+            p {
+                font-size: 18px;
+            }
 
-        .my-5 {
-            margin-top: 5rem !important;
-        }
+            h1 {
+                font-size: 50px !important;
+            }
 
-        .my-3 {
-            margin-top: 3rem !important;
+            .buton {
+                font-size: 15px;
+                width: 100%;
+            }
+
+            .row-icons {
+                flex-direction: column !important;
+            }
         }
 
         /* Asegura la correcta alineación de los íconos sociales */
@@ -87,10 +138,6 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-        }
-
-        .text-center {
-            text-align: center;
         }
     </style>
 </head>
@@ -122,10 +169,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <!-- Botón con ID único y evento de seguimiento para el Pixel -->
-                    <a id="whatsapp-button" target="_blank" class="buton" href="http://wa.link/3lvolq" onclick="trackEventOnce()">
-                        Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i>
-                    </a>
+                    <a target="_blank" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
                 </div>
             </div>
         </div>
@@ -140,18 +184,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        function trackEventOnce() {
-            // Verificar si el evento ya ha sido registrado en esta sesión
-            if (!sessionStorage.getItem('subscribedEventTriggered')) {
-                // Registrar el evento de Meta Pixel (evento personalizado)
-                fbq('trackCustom', 'SubscribedButtonClick');
-                // Marcar que el evento ha sido disparado en esta sesión
-                sessionStorage.setItem('subscribedEventTriggered', 'true');
-            }
-        }
-    </script>
 
 </body>
 
