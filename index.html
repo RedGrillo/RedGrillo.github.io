@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Bienvenidos a Red Grillo!</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
     <meta name="description" content="Bienvenidos a Red Grillo!">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <meta property="og:image" content="logo.png">
@@ -15,22 +12,15 @@
 
     <!-- Meta Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s) {
-            if(f.fbq) return; 
-            n=f.fbq=function(){n.callMethod?
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq) f._fbq=n; 
-            n.push=n; 
-            n.loaded=!0; 
-            n.version='2.0'; 
-            n.queue=[]; 
-            t=b.createElement(e); 
-            t.async=!0;
-            t.src=v;
-            s=b.getElementsByTagName(e)[0];
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)
         }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '411026101942294');
+        fbq('init', '411026101942294'); // Tu Pixel ID
         fbq('track', 'PageView');
     </script>
     <noscript>
@@ -40,105 +30,7 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        body {
-            background: radial-gradient(78% 37% at 52% 63%, rgba(25, 24, 24, 0.478) 0%, #1e3a8a 100%), url('https://wallpapers.com/images/hd/casino-background-9o4pqrpgmrk3lszu.jpg') no-repeat;
-            background-size: cover;
-        }
-
-        @keyframes olympus {
-            from {
-                transform: scale(.9)
-            }
-
-            to {
-                transform: scale(1)
-            }
-        }
-
-        p {
-            font-family: "Poppins", sans-serif;
-            font-size: 25px;
-        }
-
-        .link-a-ws {
-            padding: 1.3rem;
-            color: white;
-            border: 3px solid;
-            width: 100% !important;
-            display: flex;
-            border-radius: 5px;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 18px !important;
-            transition: .3s all ease-in;
-        }
-
-        .link-a-ws:hover {
-            border: 3px solid rgba(228, 227, 227, 0.541);
-            color: white;
-            transform: translateX(4px);
-        }
-
-        .buton {
-            color: #FFFFFF;
-            background: linear-gradient(45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
-            text-decoration: none;
-            padding: 2rem !important;
-            letter-spacing: 3px;
-            border-radius: 30px;
-            font-size: 22px;
-            font-weight: bold;
-            font-family: 'Poppins';
-            text-transform: uppercase !important;
-            transition: .3s all ease-in-out;
-        }
-
-        .transform {
-            transition: all .3s ease-in-out !important
-        }
-
-        .transform:hover {
-            transform: scale(1.1) !important;
-        }
-
-        .my-6 {
-            margin-bottom: 6rem;
-            margin-top: 6rem;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        .buton:hover {
-            transform: scale(1.1);
-        }
-
-        @media screen and (max-width: 767px) {
-            p {
-                font-size: 18px;
-            }
-
-            h1 {
-                font-size: 50px !important;
-            }
-
-            .buton {
-                font-size: 15px;
-                width: 100%;
-            }
-
-            .row-icons {
-                flex-direction: column !important;
-            }
-        }
-
-        /* Asegura la correcta alineación de los íconos sociales */
-        .row {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+        /* Tu estilo aquí */
     </style>
 </head>
 
@@ -147,44 +39,43 @@
         <div class="container">
             <div class="row my-4 justify-content-center">
                 <div class="col-lg-12">
-                    <h1 class="text-white text-uppercase fw-bold text-center" style="font-size: 7em; font-family: 'Anton'; letter-spacing: 0.325rem;">15% en la primer carga</h1>
+                    <h1 class="text-white text-uppercase fw-bold text-center">15% en la primer carga</h1>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="text" style="margin-bottom: 5em !important;">
+    <section class="text">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="container rounded py-5 px-4" style="background-color: rgba(0,0,0,0.42);">
-                        <p class="text-center text-white"><b><i class="fa-solid mx-2 fa-fire"></i>Tenes un 15% en la primer carga!</b> hace clic abajo y comunicate con nuestro agente verificado <i class="fa-solid fa-arrow-circle-down"></i></p>
+                        <p class="text-center text-white"><b><i class="fas fa-gamepad"></i> ¡Haz clic para comenzar!</b></p>
+
+                        <div id="contentBoton" class="contentBoton">
+                            <!-- El botón con el evento de redirección -->
+                            <button id="botonEnviarSolicitud" class="btn btn-primary">Abrir WhatsApp</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="text my-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <a target="_blank" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+        document.getElementById('botonEnviarSolicitud').addEventListener('click', function() {
+            // Disparar el evento de Facebook Pixel antes de la redirección
+            fbq('track', 'Contact'); // El evento Contact
 
-    <section class="text" style="margin-top: 6rem;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 text-center">
-                    <p class="text-white">¡Gracias por visitarnos! <i class="fa-solid fa-thumbs-up"></i></p>
-                </div>
-            </div>
-        </div>
-    </section>
+            // Establecer el número y el mensaje para WhatsApp
+            const telefono = '5492235917194'; // Cambia por tu número
+            const mensaje = 'Hola, vi el anuncio y quiero crear un usuario gratis para empezar a Jugar';
 
+            // Redirigir a WhatsApp después de disparar el evento
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+            window.location.href = whatsappUrl;
+        });
+    </script>
 </body>
-
 </html>
