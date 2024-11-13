@@ -2,18 +2,14 @@
 <html lang="es">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Bienvenidos a Red Grillo!</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="description" content="Bienvenidos a Red Grillo!">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <meta property="og:image" content="logo.png">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tu Página</title>
+    <link rel="stylesheet" href="tu-estilo.css">
+    <!-- Otros links y meta etiquetas que tengas aquí -->
 
-    <!-- Meta Pixel Code -->
+    <!-- Código de Meta Pixel -->
     <script>
         !function(f,b,e,v,n,t,s) {
             if(f.fbq) return; 
@@ -30,141 +26,38 @@
             s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)
         }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '411026101942294');
-        fbq('track', 'PageView');
+        fbq('init', '411026101942294');  // ID de tu Pixel
+        fbq('track', 'PageView');  // Registramos la visita
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=411026101942294&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Meta Pixel Code -->
-
-    <style>
-        body {
-            background: radial-gradient(78% 37% at 52% 63%, rgba(25, 24, 24, 0.478) 0%, #1e3a8a 100%), url('https://wallpapers.com/images/hd/casino-background-9o4pqrpgmrk3lszu.jpg') no-repeat;
-            background-size: cover;
-        }
-
-        @keyframes olympus {
-            from {
-                transform: scale(.9)
-            }
-
-            to {
-                transform: scale(1)
-            }
-        }
-
-        p {
-            font-family: "Poppins", sans-serif;
-            font-size: 25px;
-        }
-
-        .link-a-ws {
-            padding: 1.3rem;
-            color: white;
-            border: 3px solid;
-            width: 100% !important;
-            display: flex;
-            border-radius: 5px;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 18px !important;
-            transition: .3s all ease-in;
-        }
-
-        .link-a-ws:hover {
-            border: 3px solid rgba(228, 227, 227, 0.541);
-            color: white;
-            transform: translateX(4px);
-        }
-
-        .buton {
-            color: #FFFFFF;
-            background: linear-gradient(45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
-            text-decoration: none;
-            padding: 2rem !important;
-            letter-spacing: 3px;
-            border-radius: 30px;
-            font-size: 22px;
-            font-weight: bold;
-            font-family: 'Poppins';
-            text-transform: uppercase !important;
-            transition: .3s all ease-in-out;
-        }
-
-        .transform {
-            transition: all .3s ease-in-out !important
-        }
-
-        .transform:hover {
-            transform: scale(1.1) !important;
-        }
-
-        .my-6 {
-            margin-bottom: 6rem;
-            margin-top: 6rem;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        .buton:hover {
-            transform: scale(1.1);
-        }
-
-        @media screen and (max-width: 767px) {
-            p {
-                font-size: 18px;
-            }
-
-            h1 {
-                font-size: 50px !important;
-            }
-
-            .buton {
-                font-size: 15px;
-                width: 100%;
-            }
-
-            .row-icons {
-                flex-direction: column !important;
-            }
-        }
-
-        /* Asegura la correcta alineación de los íconos sociales */
-        .row {
-            display: flex;
-            justify-content: center;
-        }
-
-        .row-icons {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-        }
-    </style>
-
 </head>
 
 <body>
+    <!-- Contenido de tu página aquí -->
+    
     <section class="text my-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <!-- Aquí cambiamos el enlace por un botón -->
-                    <button id="btn-register" class="buton">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></button>
+                    <!-- Botón de "Registrarse ahora" -->
+                    <a id="btn-register" class="buton" href="javascript:void(0)">
+                        Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Otros elementos de tu página aquí -->
+
+    <!-- Código para gestionar el clic y la redirección a WhatsApp -->
     <script>
-        // Se añadió un evento de clic para manejar el seguimiento y la redirección
+        // Manejador del evento de clic en el botón de registro
         document.getElementById('btn-register').addEventListener('click', function() {
-            fbq('track', 'Contact');  // Dispara el evento "Contact"
-            window.location.href = 'http://wa.link/3lvolq';  // Redirige al usuario a WhatsApp
+            // Primero, disparar el evento de Meta Pixel
+            fbq('track', 'Contact');  // Registramos el evento "Contact" (puedes cambiar el nombre del evento si lo prefieres)
+
+            // Luego, redirigir a WhatsApp
+            window.location.href = 'http://wa.link/3lvolq';  // Cambia esto por tu enlace de WhatsApp
         });
     </script>
 
