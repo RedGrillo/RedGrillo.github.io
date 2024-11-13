@@ -18,7 +18,7 @@
         !function(f,b,e,v,n,t,s) {
             if(f.fbq) return; 
             n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
             if(!f._fbq) f._fbq=n; 
             n.push=n; 
             n.loaded=!0; 
@@ -169,7 +169,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <a target="_blank" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
+                    <!-- Se ha agregado un ID único para el botón -->
+                    <a id="whatsapp-button" target="_blank" class="buton" href="http://wa.link/3lvolq">
+                        Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -185,7 +188,13 @@
         </div>
     </section>
 
+    <script>
+        // Agregar seguimiento de evento de clic en el botón
+        document.getElementById("whatsapp-button").addEventListener("click", function() {
+            fbq('track', 'Lead');  // Cambiar 'Lead' por el tipo de evento que prefieras
+        });
+    </script>
+
 </body>
 
 </html>
-
