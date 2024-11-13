@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Bienvenidos a Red Grillo!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <meta name="description" content="Bienvenidos a Red Grillo!">
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <meta property="og:image" content="logo.png">
@@ -12,15 +15,22 @@
 
     <!-- Meta Pixel Code -->
     <script>
-        !function(f,b,e,v,n,t,s){
-            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq) return; 
+            n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
+            if(!f._fbq) f._fbq=n; 
+            n.push=n; 
+            n.loaded=!0; 
+            n.version='2.0'; 
+            n.queue=[]; 
+            t=b.createElement(e); 
+            t.async=!0;
+            t.src=v;
+            s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)
         }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '411026101942294'); // Tu Pixel ID
+        fbq('init', '411026101942294');
         fbq('track', 'PageView');
     </script>
     <noscript>
@@ -30,160 +40,134 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        /* Estilos generales */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background-color: #2c0063;
-            color: #fff;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .containerTop {
-            background-image: url('img/sch11/bg.jpg');
+        body {
+            background: radial-gradient(78% 37% at 52% 63%, rgba(25, 24, 24, 0.478) 0%, #1e3a8a 100%), url('https://wallpapers.com/images/hd/casino-background-9o4pqrpgmrk3lszu.jpg') no-repeat;
             background-size: cover;
-            background-position: top;
+        }
+
+        @keyframes olympus {
+            from {
+                transform: scale(.9)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        p {
+            font-family: "Poppins", sans-serif;
+            font-size: 25px;
+        }
+
+        .link-a-ws {
+            padding: 1.3rem;
+            color: white;
+            border: 3px solid;
+            width: 100% !important;
+            display: flex;
+            border-radius: 5px;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px !important;
+            transition: .3s all ease-in;
+        }
+
+        .link-a-ws:hover {
+            border: 3px solid rgba(228, 227, 227, 0.541);
+            color: white;
+            transform: translateX(4px);
+        }
+
+        .buton {
+            color: #FFFFFF;
+            background: linear-gradient(45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
+            text-decoration: none;
+            padding: 2rem !important;
+            letter-spacing: 3px;
+            border-radius: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Poppins';
+            text-transform: uppercase !important;
+            transition: .3s all ease-in-out;
+        }
+
+        .transform {
+            transition: all .3s ease-in-out !important
+        }
+
+        .transform:hover {
+            transform: scale(1.1) !important;
+        }
+
+        .my-6 {
+            margin-bottom: 6rem;
+            margin-top: 6rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .buton:hover {
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 767px) {
+            p {
+                font-size: 18px;
+            }
+
+            h1 {
+                font-size: 50px !important;
+            }
+
+            .buton {
+                font-size: 15px;
+                width: 100%;
+            }
+
+            .row-icons {
+                flex-direction: column !important;
+            }
+        }
+
+        /* Asegura la correcta alineación de los íconos sociales */
+        .row {
             display: flex;
             justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 0;
         }
 
-        .content {
-            max-width: 600px;
-            margin-top: 30px;
-        }
-
-        .btnwsp {
-            background-color: transparent;
-            border: 0;
-            cursor: pointer;
-        }
-
-        .whatsapp-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: #fff;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 70px;
-            font-size: 36px;
-            z-index: 9999;
-            cursor: pointer;
-        }
-
-        .whatsapp-icon:hover {
-            background-color: #fff;
-            color: #25D366;
-            border: 0.5px solid #25D366;
+        .row-icons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
         }
     </style>
+
 </head>
 
 <body>
-    <div class="containerTop">
-        <div class="content">
-            <div class="contentLogo">
-                <img src='img/sch11/logo.png' width='120' height='120'>
-            </div>
-
-            <div class="contentTitulo">
-                <img src='img/sch11/titulo.png' width='60%' height='60%'><br><center>
-                <div class="contentBanner">
-                    <div class="visible">
-                        <p>Juegos</p>
-                        <ul>
-                            <li>Nuevos Slots</li>
-                            <li>Tragamonedas</li>
-                            <li>Ruletas</li>
-                        </ul>
-                    </div>
+    <section class="text my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <!-- Aquí cambiamos el enlace por un botón -->
+                    <button id="btn-register" class="buton">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></button>
                 </div>
-            </div>
-
-            <div id="contentBoton" class="contentBoton">
-                <!-- Botón para enviar solicitud a WhatsApp -->
-                <button id="botonEnviarSolicitud" class="btnwsp">
-                    <img src="img/sch11/boton.png" class="imgboton" width="80%" height="80%" border="0">
-                </button>
-            </div>
-
-            <div class="loadWsp" id="loadWsp">
-                <div class="conecting">
-                    <div class="conectingTxt">Conectando con WhatsApp...</div>
-                    <div class="conectingIcon">
-                        <div class="c-loader"></div>
-                    </div>
-                </div>
-                <div class="info">
-                    Si no se abre el enlace, escríbenos al <b>2235917194</b> para crear tu <b>usuario</b> y regalarte un Bono de Bienvenida.
-                </div>
-            </div>
-
-            <div class="contentLeyenda">
-                <p>HACE CLIC EN EL BOTÓN PARA</p>
-                <p>CREAR TU USUARIO</p>
-            </div>
-
-            <div class="bono">
-                <div class="leyenda">
-                    <p><b>Bono primera carga!</b></p>
-                </div>
-                <p>CARGA MÍNIMA <b>$1000</b></p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="containerLista">
-        <div class="containerItem">
-            <img src='img/sch11/ic1.png' width='70px' height='70px'>
-            <p>Aceptamos transferencias de <br>cualquier banco, CBU o CVU.</p>
-        </div>
-    </div>
-
-    <div class="containerLista">
-        <div class="containerItem">
-            <img src='img/sch11/ic2.png' width='70px' height='70px'>
-            <p>Estamos cargando las 24hs<br>todos los días</p>
-        </div>
-    </div>
-
-    <div class="containerAviso">
-        <p>Jugar compulsivamente es perjudicial para la salud. <br> </p>
-        <p>Prohibido el juego de azar a menores de 18 años.</p>
-    </div>
-
-    <!-- Script para redirigir a WhatsApp y disparar el evento de Facebook Pixel -->
     <script>
-        document.getElementById('botonEnviarSolicitud').addEventListener('click', function() {
-            // Disparar el evento de Facebook Pixel 'Contact'
-            fbq('track', 'Contact'); // Evento personalizado de Facebook
-
-            // Definir el número de WhatsApp y el mensaje
-            const telefono = '5492235917194';  // Cambia por tu número de WhatsApp
-            const mensaje = 'Hola, vi el anuncio y quiero crear un usuario gratis para empezar a Jugar';
-
-            // Crear la URL para WhatsApp con el mensaje
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
-
-            // Redirigir a WhatsApp
-            window.location.href = whatsappUrl;
+        // Se añadió un evento de clic para manejar el seguimiento y la redirección
+        document.getElementById('btn-register').addEventListener('click', function() {
+            fbq('track', 'Contact');  // Dispara el evento "Contact"
+            window.location.href = 'http://wa.link/3lvolq';  // Redirige al usuario a WhatsApp
         });
     </script>
+
 </body>
+
 </html>
