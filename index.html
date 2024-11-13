@@ -169,18 +169,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <!-- Aquí está la modificación. -->
-                    <!-- Opción 1: Agregar un evento de clic mediante JavaScript -->
-                    <a id="registrar-btn" target="_blank" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
-
-                    <script>
-                        document.getElementById('registrar-btn').addEventListener('click', function() {
-                            fbq('track', 'Lead'); // Evento de Meta Pixel al hacer clic
-                        });
-                    </script>
-
-                    <!-- Opción 2: Usar directamente el atributo onclick en el enlace -->
-                    <!-- <a target="_blank" class="buton" href="http://wa.link/3lvolq" onclick="fbq('track', 'Lead');">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a> -->
+                    <!-- Aquí está el botón modificado con la estructura correcta -->
+                    <a target="_blank" class="buton" href="https://wa.link/3lvolq" id="registro-boton">
+                        Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -195,6 +187,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Meta Pixel Script -->
+    <script>
+        // Seguimiento del botón de "Registrate ahora"
+        document.getElementById("registro-boton").addEventListener("click", function() {
+            fbq('track', 'Lead');
+        });
+    </script>
 
 </body>
 
