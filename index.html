@@ -123,7 +123,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
                     <!-- Botón con ID único y evento de seguimiento para el Pixel -->
-                    <a id="whatsapp-button" target="_blank" class="buton" href="http://wa.link/3lvolq" onclick="fbq('track', 'SubscribedButtonClick');">
+                    <a id="whatsapp-button" target="_blank" class="buton" href="http://wa.link/3lvolq" onclick="trackEventOnce()">
                         Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i>
                     </a>
                 </div>
@@ -140,6 +140,18 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function trackEventOnce() {
+            // Verificar si el evento ya ha sido registrado en esta sesión
+            if (!sessionStorage.getItem('subscribedEventTriggered')) {
+                // Registrar el evento de Meta Pixel
+                fbq('track', 'SubscribedButtonClick');
+                // Marcar que el evento ha sido disparado en esta sesión
+                sessionStorage.setItem('subscribedEventTriggered', 'true');
+            }
+        }
+    </script>
 
 </body>
 
