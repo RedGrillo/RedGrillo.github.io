@@ -169,8 +169,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <!-- Botón de registro con id para capturar el evento -->
-                    <a id="btn-register" class="buton" href="#">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
+                    <a target="_blank" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
                 </div>
             </div>
         </div>
@@ -185,22 +184,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Script para manejar el clic en el botón y redirigir a WhatsApp -->
-    <script>
-        // Manejador del evento de clic
-        document.getElementById('btn-register').addEventListener('click', function(event) {
-            event.preventDefault();  // Evita que el enlace se siga automáticamente
-
-            // Enviar evento a Meta Pixel
-            fbq('track', 'Contact'); // Aquí puedes personalizar el nombre del evento
-
-            // Redirigir a WhatsApp después de un pequeño retraso para asegurar que el evento se registre
-            setTimeout(function() {
-                window.location.href = 'http://wa.link/3lvolq'; // Asegúrate de que este enlace sea el correcto
-            }, 200); // 200 ms de delay, ajusta si es necesario
-        });
-    </script>
 
 </body>
 
