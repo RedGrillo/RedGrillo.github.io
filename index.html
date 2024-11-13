@@ -169,8 +169,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <!-- Botón con evento para Meta Pixel -->
-                    <a id="registro-boton" target="_blank" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
+                    <!-- Botón con evento para Meta Pixel (sin target="_blank") -->
+                    <a id="registro-boton" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
                 </div>
             </div>
         </div>
@@ -194,7 +194,7 @@
             
             // Redirige después de un pequeño retraso para asegurar el seguimiento
             setTimeout(function() {
-                window.location.href = e.target.href;
+                window.location.href = e.target.href; // Redirección a la misma pestaña
             }, 200); // Espera 200ms antes de redirigir
         });
     </script>
