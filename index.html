@@ -143,4 +143,16 @@
 
     <script>
         function trackEventOnce() {
-            // Ver
+            // Verificar si el evento ya ha sido registrado en esta sesión
+            if (!sessionStorage.getItem('subscribedEventTriggered')) {
+                // Registrar el evento de Meta Pixel
+                fbq('trackCustom', 'SubscribedButtonClick');
+                // Marcar que el evento ha sido disparado en esta sesión
+                sessionStorage.setItem('subscribedEventTriggered', 'true');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
