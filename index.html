@@ -169,10 +169,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <!-- Aquí está el botón modificado con la estructura correcta -->
-                    <a target="_blank" class="buton" href="https://wa.link/3lvolq" id="registro-boton">
-                        Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i>
-                    </a>
+                    <!-- Botón con evento para Meta Pixel -->
+                    <a id="registro-boton" target="_blank" class="buton" href="http://wa.link/3lvolq">Registrate ahora <i class="mx-2 fa-solid fa-check-square"></i></a>
                 </div>
             </div>
         </div>
@@ -188,14 +186,12 @@
         </div>
     </section>
 
-    <!-- Meta Pixel Script -->
+    <!-- Script de seguimiento para el botón -->
     <script>
-        // Seguimiento del botón de "Registrate ahora"
         document.getElementById("registro-boton").addEventListener("click", function() {
-            fbq('track', 'Lead');
+            fbq('track', 'Lead'); // Este evento será detectado por Meta Pixel
         });
     </script>
-
 </body>
 
 </html>
