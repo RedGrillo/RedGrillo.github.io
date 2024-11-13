@@ -30,50 +30,158 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        /* Tu estilo aquí */
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #2c0063;
+            color: #fff;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .containerTop {
+            background-image: url('img/sch11/bg.jpg');
+            background-size: cover;
+            background-position: top;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0;
+        }
+
+        .content {
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .btnwsp {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #fff;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 70px;
+            font-size: 36px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        .whatsapp-icon:hover {
+            background-color: #fff;
+            color: #25D366;
+            border: 0.5px solid #25D366;
+        }
     </style>
 </head>
 
 <body>
-    <section class="title my-3">
-        <div class="container">
-            <div class="row my-4 justify-content-center">
-                <div class="col-lg-12">
-                    <h1 class="text-white text-uppercase fw-bold text-center">15% en la primer carga</h1>
-                </div>
+    <div class="containerTop">
+        <div class="content">
+            <div class="contentLogo">
+                <img src='img/sch11/logo.png' width='120' height='120'>
             </div>
-        </div>
-    </section>
 
-    <section class="text">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="container rounded py-5 px-4" style="background-color: rgba(0,0,0,0.42);">
-                        <p class="text-center text-white"><b><i class="fas fa-gamepad"></i> ¡Haz clic para comenzar!</b></p>
-
-                        <div id="contentBoton" class="contentBoton">
-                            <!-- El botón con el evento de redirección -->
-                            <button id="botonEnviarSolicitud" class="btn btn-primary">Abrir WhatsApp</button>
-                        </div>
-
+            <div class="contentTitulo">
+                <img src='img/sch11/titulo.png' width='60%' height='60%'><br><center>
+                <div class="contentBanner">
+                    <div class="visible">
+                        <p>Juegos</p>
+                        <ul>
+                            <li>Nuevos Slots</li>
+                            <li>Tragamonedas</li>
+                            <li>Ruletas</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
+            <div id="contentBoton" class="contentBoton">
+                <!-- Botón para enviar solicitud a WhatsApp -->
+                <button id="botonEnviarSolicitud" class="btnwsp">
+                    <img src="img/sch11/boton.png" class="imgboton" width="80%" height="80%" border="0">
+                </button>
+            </div>
+
+            <div class="loadWsp" id="loadWsp">
+                <div class="conecting">
+                    <div class="conectingTxt">Conectando con WhatsApp...</div>
+                    <div class="conectingIcon">
+                        <div class="c-loader"></div>
+                    </div>
+                </div>
+                <div class="info">
+                    Si no se abre el enlace, escríbenos al <b>2235917194</b> para crear tu <b>usuario</b> y regalarte un Bono de Bienvenida.
+                </div>
+            </div>
+
+            <div class="contentLeyenda">
+                <p>HACE CLIC EN EL BOTÓN PARA</p>
+                <p>CREAR TU USUARIO</p>
+            </div>
+
+            <div class="bono">
+                <div class="leyenda">
+                    <p><b>Bono primera carga!</b></p>
+                </div>
+                <p>CARGA MÍNIMA <b>$1000</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerLista">
+        <div class="containerItem">
+            <img src='img/sch11/ic1.png' width='70px' height='70px'>
+            <p>Aceptamos transferencias de <br>cualquier banco, CBU o CVU.</p>
+        </div>
+    </div>
+
+    <div class="containerLista">
+        <div class="containerItem">
+            <img src='img/sch11/ic2.png' width='70px' height='70px'>
+            <p>Estamos cargando las 24hs<br>todos los días</p>
+        </div>
+    </div>
+
+    <div class="containerAviso">
+        <p>Jugar compulsivamente es perjudicial para la salud. <br> </p>
+        <p>Prohibido el juego de azar a menores de 18 años.</p>
+    </div>
+
+    <!-- Script para redirigir a WhatsApp y disparar el evento de Facebook Pixel -->
     <script>
         document.getElementById('botonEnviarSolicitud').addEventListener('click', function() {
-            // Disparar el evento de Facebook Pixel antes de la redirección
-            fbq('track', 'Contact'); // El evento Contact
+            // Disparar el evento de Facebook Pixel 'Contact'
+            fbq('track', 'Contact'); // Evento personalizado de Facebook
 
-            // Establecer el número y el mensaje para WhatsApp
-            const telefono = '5492235917194'; // Cambia por tu número
+            // Definir el número de WhatsApp y el mensaje
+            const telefono = '5492235917194';  // Cambia por tu número de WhatsApp
             const mensaje = 'Hola, vi el anuncio y quiero crear un usuario gratis para empezar a Jugar';
 
-            // Redirigir a WhatsApp después de disparar el evento
+            // Crear la URL para WhatsApp con el mensaje
             const whatsappUrl = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+
+            // Redirigir a WhatsApp
             window.location.href = whatsappUrl;
         });
     </script>
